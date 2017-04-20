@@ -1,0 +1,456 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/codemix/babel-plugin-macros"
+
+    >babel-plugin-macros (v1.0.15)</a>
+</h1>
+<h4>Macros for JavaScript via a babel plugin.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-macros">module babel-plugin-macros</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-macros.default">
+            function <span class="apidocSignatureSpan">babel-plugin-macros.</span>default
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-plugin-macros.</span>Macro</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-plugin-macros.</span>builtin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-plugin-macros.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-macros.Macro">module babel-plugin-macros.Macro</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-macros.Macro.default">
+            function <span class="apidocSignatureSpan">babel-plugin-macros.Macro.</span>default
+            <span class="apidocSignatureSpan">(_ref3)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-macros.builtin">module babel-plugin-macros.builtin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-macros.builtin.DEFINE_MACRO">
+            function <span class="apidocSignatureSpan">babel-plugin-macros.builtin.</span>DEFINE_MACRO
+            <span class="apidocSignatureSpan">(path, scope)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-macros.utils">module babel-plugin-macros.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-macros.utils.camelCase">
+            function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>camelCase
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-macros.utils.checkMultipleReturn">
+            function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>checkMultipleReturn
+            <span class="apidocSignatureSpan">(node, scope)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-macros.utils.collectReferences">
+            function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>collectReferences
+            <span class="apidocSignatureSpan">(node, scope)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-macros.utils.getLocationMessage">
+            function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>getLocationMessage
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-macros.utils.getParentBlock">
+            function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>getParentBlock
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-macros.utils.getParentScope">
+            function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>getParentScope
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-macros.utils.warning">
+            function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>warning
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-macros" id="apidoc.module.babel-plugin-macros">module babel-plugin-macros</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-macros.default" id="apidoc.element.babel-plugin-macros.default">
+        function <span class="apidocSignatureSpan">babel-plugin-macros.</span>default
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function build() {
+  &#x22;use strict&#x22;;
+
+  return { visitor: _visitors.mainVisitor };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-macros.Macro" id="apidoc.module.babel-plugin-macros.Macro">module babel-plugin-macros.Macro</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-macros.Macro.default" id="apidoc.element.babel-plugin-macros.Macro.default">
+        function <span class="apidocSignatureSpan">babel-plugin-macros.Macro.</span>default
+        <span class="apidocSignatureSpan">(_ref3)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Macro(_ref3) {
+  var name = _ref3.name;
+  var macroBody = _ref3.macroBody;
+  var scope = _ref3.scope;
+  var location = _ref3.location;
+
+  _classCallCheck(this, Macro);
+
+  location = location || &#x27;&#x27;;
+  (0, _babelTraverse2.default)(macroBody, _babelTraverse2.default.visitors.merge([_visitors.collectMacros, {
+    ThisExpression: function ThisExpression() {
+      throw new Error(&#x22;Can not use `this` in macro&#x22; + location);
+    },
+    Identifier: function Identifier(_ref4) {
+      var node = _ref4.node;
+
+      if (&#x22;arguments&#x22; === node.name) {
+        throw new Error(&#x22;Can not use `arguments` in macro&#x22; + location);
+      }
+    }
+  }]), scope);
+  this.name = name;
+  this.macroBody = macroBody;
+  this.scope = scope;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-macros.builtin" id="apidoc.module.babel-plugin-macros.builtin">module babel-plugin-macros.builtin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-macros.builtin.DEFINE_MACRO" id="apidoc.element.babel-plugin-macros.builtin.DEFINE_MACRO">
+        function <span class="apidocSignatureSpan">babel-plugin-macros.builtin.</span>DEFINE_MACRO
+        <span class="apidocSignatureSpan">(path, scope)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defineMacro(path, scope) {
+  &#x22;use strict&#x22;;
+
+  var node = path.node;
+
+  var location = (0, _utils.getLocationMessage)(node);
+  if (!t.isIdentifier(node.arguments[0])) {
+    throw new Error(&#x27;First argument to DEFINE_MACRO must be an identifier&#x27; + location);
+  }
+  if (!t.isFunction(node.arguments[1])) {
+    throw new Error(&#x27;Second argument to DEFINE_MACRO must be a FunctionExpression or ArrowFunctionExpression&#x27; + location);
+  }
+  _Macro2.default.register(node.arguments[0].name, path.get(&#x27;arguments.1&#x27;), scope, location);
+  path.remove();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-macros.utils" id="apidoc.module.babel-plugin-macros.utils">module babel-plugin-macros.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-macros.utils.camelCase" id="apidoc.element.babel-plugin-macros.utils.camelCase">
+        function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>camelCase
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function camelCase(input) {
+  &#x22;use strict&#x22;;
+
+  return input.toLowerCase().replace(/_(.)/g, function (match, char) {
+    return char.toUpperCase();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-macros.utils.checkMultipleReturn" id="apidoc.element.babel-plugin-macros.utils.checkMultipleReturn">
+        function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>checkMultipleReturn
+        <span class="apidocSignatureSpan">(node, scope)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkMultipleReturn(node, scope) {
+  &#x22;use strict&#x22;;
+
+  var hasMultipleReturn = false;
+  (0, _babelTraverse2.default)(node, {
+    ReturnStatement: function ReturnStatement(path, state) {
+      if (++state.count &#x3e; 1) {
+        hasMultipleReturn = true;
+        path.stop();
+      }
+    }
+  }, scope, { count: 0 });
+  return hasMultipleReturn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-macros.utils.collectReferences" id="apidoc.element.babel-plugin-macros.utils.collectReferences">
+        function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>collectReferences
+        <span class="apidocSignatureSpan">(node, scope)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function collectReferences(node, scope) {
+  &#x22;use strict&#x22;;
+
+  var paramNames = node.params.map(function (param) {
+    return param.name;
+  });
+  var paramReferenceCounts = {};
+  var references = Object.create(null);
+  (0, _babelTraverse2.default)(node, {
+    enter: function enter(subPath) {
+      var child = subPath.node;
+      var parent = subPath.parent;
+
+      if (subPath.isVariableDeclarator() || subPath.isFunctionDeclaration()) {
+        references[child.id.name] = true;
+      } else if (subPath.isIdentifier() &#x26;&#x26; (!t.isFunction(parent) || parent.type === &#x22;ArrowFunctionExpression&#x22; &#x26;&#x26; parent.body ===
+child) &#x26;&#x26; (!t.isMemberExpression(parent) || parent.object === child) &#x26;&#x26; ~paramNames.indexOf(child.name)) {
+        paramReferenceCounts[child.name] = paramReferenceCounts[child.name] || 0;
+        paramReferenceCounts[child.name]++;
+      }
+    }
+  }, scope);
+  return { paramReferenceCounts: paramReferenceCounts, references: references };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-macros.utils.getLocationMessage" id="apidoc.element.babel-plugin-macros.utils.getLocationMessage">
+        function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>getLocationMessage
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getLocationMessage(node) {
+  &#x22;use strict&#x22;;
+
+  return node.loc ? &#x27;, at Line: &#x27; + node.loc.start.line + &#x27; Column: &#x27; + (node.loc.start.column + 1) : &#x27;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-macros.utils.getParentBlock" id="apidoc.element.babel-plugin-macros.utils.getParentBlock">
+        function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>getParentBlock
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getParentBlock(path) {
+  &#x22;use strict&#x22;;
+
+  while (path.parentPath.type !== &#x27;Program&#x27; &#x26;&#x26; path.parentPath &#x26;&#x26; !(path.parentPath.isLabeledStatement() || path.parentPath.isBlockStatement
+())) {
+    path = path.parentPath;
+  }
+  return path;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-macros.utils.getParentScope" id="apidoc.element.babel-plugin-macros.utils.getParentScope">
+        function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>getParentScope
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getParentScope(path) {
+  &#x22;use strict&#x22;;
+
+  while (path.parentPath.type !== &#x27;Program&#x27; &#x26;&#x26; path.parentPath &#x26;&#x26; !path.parentPath.isStatementOrBlock()) {
+    path = path.parentPath;
+  }
+  return path.scope;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-macros.utils.warning" id="apidoc.element.babel-plugin-macros.utils.warning">
+        function <span class="apidocSignatureSpan">babel-plugin-macros.utils.</span>warning
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function warning(msg) {
+  &#x22;use strict&#x22;;
+
+  console.error(msg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
